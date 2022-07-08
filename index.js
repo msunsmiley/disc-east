@@ -26,6 +26,9 @@ east.on('messageCreate', (message) => {
     else if (message.content.toLowerCase()===(`hi ${east.user.toString()}`)) {
         message.reply('Hello!');
     }
+    else if (message.content.toLowerCase() === (`test`)) {
+        console.log('test');
+      }
     // bowling ball
     else if (message.content==='😮'){
         if (message.member.roles.cache.has(role_bball.id)) {
@@ -48,7 +51,7 @@ east.on('messageCreate', (message) => {
     // hey bot give me a goat pic
     else if(message.channelId === goatchannel.id){
         if(message.content.toLowerCase() === "hey bot give me a goat pic"){
-            const a = Math.floor(Math.random()*15) + 1;
+            const a = Math.floor(Math.random()*14) + 1;
             
             message.reply({files:['./img/goats/' + a + '.jpg']})
         }
