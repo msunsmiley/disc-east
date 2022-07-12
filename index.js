@@ -9,7 +9,7 @@ const east = new Client({ intents:[Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MES
 east.on('ready',()=>{
     console.log(`${east.user.username} is ready to perform`);
 
-    east.user.setPresence({ activites: [{ name: 'being gay and doing crimes' }] })
+    east.user.setPresence({ activities: [{ name: 'being gay and doing crimes' }] })
 })
  
 
