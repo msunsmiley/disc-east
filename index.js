@@ -41,10 +41,10 @@ east.on('messageCreate', (message) => {
     }
     else if (message.content==='🦴'){
         if (message.member.roles.cache.has(role_udt.id)) {
-            message.reply(`${message.author.toString()} 😔`);console.log(`${message.author.toString()} 😔`);
+            message.reply(`${message.author.toString()} 😔`);console.log(`${message.author.tag} 😔`);
         }
         else {
-        message.reply(`${message.author.toString()} given ultimate dog toy`);console.log(`${message.author.toString()} given ultimate dog toy`);
+        message.reply(`${message.author.toString()} given ultimate dog toy`);console.log(`${message.author.tag} given ultimate dog toy`);
         message.member.roles.add(role_udt);}
     }
     // hey bot give me a goat pic
