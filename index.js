@@ -23,7 +23,7 @@ east.on('messageCreate', (message) => {
 
     // say "hi @east"
     else if (message.content.toLowerCase()===(`hi ${east.user.toString()}`)) {
-        message.reply('Hello!');
+        message.reply('Hello!'); console.log('Hello!');
     }
     else if (message.content.toLowerCase() === (`test`)) {
         console.log('test');
@@ -31,10 +31,10 @@ east.on('messageCreate', (message) => {
     // bowling ball
     else if (message.content==='😮'){
         if (message.member.roles.cache.has(role_bball.id)) {
-            message.reply(`${message.author.toString()} 😔`)
+            message.reply(`${message.author.toString()} 😔`);console.log(`${message.author.toString()} 😔`);
         }
         else {
-        message.reply(`${message.author.toString()} given bowling ball`);
+        message.reply(`${message.author.toString()} given bowling ball`);console.log(`${message.author.toString()} given bowling ball`);
         message.member.roles.add(role_bball);
         }
     // ultimate dog toy
