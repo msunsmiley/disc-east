@@ -31,20 +31,20 @@ east.on('messageCreate', (message) => {
     // bowling ball
     else if (message.content==='😮'){
         if (message.member.roles.cache.has(role_bball.id)) {
-            message.reply(`${message.author.toString()} 😔`);console.log(`${message.author.toString()} 😔`);
+            message.reply(`${message.author.toString()} 😔`);console.log(`${message.author.tag} 😔`);
         }
         else {
-        message.reply(`${message.author.toString()} given bowling ball`);console.log(`${message.author.toString()} given bowling ball`);
+        message.reply(`${message.author.toString()} given bowling ball`); console.log(`${message.author.tag} given bowling ball`);
         message.member.roles.add(role_bball);
         }
     // ultimate dog toy
     }
     else if (message.content==='🦴'){
         if (message.member.roles.cache.has(role_udt.id)) {
-            message.reply(`${message.author.toString()} 😔`)
+            message.reply(`${message.author.toString()} 😔`);console.log(`${message.author.toString()} 😔`);
         }
         else {
-        message.reply(`${message.author.toString()} given ultimate dog toy`);
+        message.reply(`${message.author.toString()} given ultimate dog toy`);console.log(`${message.author.toString()} given ultimate dog toy`);
         message.member.roles.add(role_udt);}
     }
     // hey bot give me a goat pic
@@ -53,9 +53,11 @@ east.on('messageCreate', (message) => {
             const a = Math.floor(Math.random()*14) + 1;
             
             message.reply({files:['./img/goats/' + a + '.jpg']})
+            console.log("goat pic given");
         }
         if (message.content.toLowerCase() !== 'hey bot give me a goat pic') {
             message.delete();
+            console.log(`${message.author.tag}: ${message.content} deleted`);
         }
     }
 })
