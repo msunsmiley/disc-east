@@ -6,7 +6,6 @@ const {MessageAttachment,Client, Intents} = require('discord.js');
 const east = new Client({ intents:[Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 //
 
-//for(i=1;i<16;i++) {help = './img/goats/' + i + '.jpg'; console.log(help)}
 
 east.on('ready',()=>{
     console.log(`${east.user.username} is ready to perform`);
