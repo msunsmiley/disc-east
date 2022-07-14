@@ -25,7 +25,7 @@ east.on('messageCreate', (message) => {
     if (message.author.bot) { return; }
 
     // say "hi @east"
-    else if (message.content.toLowerCase()===`hi ${east.user.toString()}` || message.content.toLowercase()==='hi @east') {
+    else if (message.content.toLowerCase()===`hi ${east.user.toString()}` || message.content.toLowerCase()==='hi @east') {
         message.reply('Hello!').catch(console.error)
         console.log('Hello!')
     }
