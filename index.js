@@ -15,11 +15,11 @@ east.on('ready',()=>{
 
 east.on('messageCreate', (message) => {
     //roles
-    var role_bball = message.guild.roles.cache.find(r=>r.name==="bowling ball")
-    var role_udt = message.guild.roles.cache.find(r=>r.name==="ultimate dog toy")
-    var role_catpic = message.guild.roles.cache.find(r=>r.name==="cat pic??")
+    let role_bball = message.guild.roles.cache.find(r=>r.name==="bowling ball")
+    let role_udt = message.guild.roles.cache.find(r=>r.name==="ultimate dog toy")
+    let role_catpic = message.guild.roles.cache.find(r=>r.name==="cat pic??")
     //channels
-    var goatchannel = message.guild.channels.cache.find(c=>c.name==="heybotgivemeagoatpic")
+    let goatchannel = message.guild.channels.cache.find(c=>c.name==="heybotgivemeagoatpic")
 
     // to avoid duplication
     if (message.author.bot) { return; }
@@ -62,10 +62,10 @@ east.on('messageCreate', (message) => {
             let a = Math.floor(Math.random()*35);
             
             message.reply({files:['./img/goats/' + a + '.jpg']}).catch(console.error)
-            console.log("goat pic given")
             if(a==0){
                 message.member.roles.add(role_catpic).catch(console.error)
-            }
+                console.log("cat pic given")
+            } else {console.log("goat pic given")}
         }
         if (message.content.toLowerCase() !== 'hey bot give me a goat pic') {
             message.delete().catch(console.error)
