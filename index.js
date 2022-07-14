@@ -18,6 +18,7 @@ east.on('messageCreate', (message) => {
     let role_bball = message.guild.roles.cache.find(r=>r.name==="bowling ball")
     let role_udt = message.guild.roles.cache.find(r=>r.name==="ultimate dog toy")
     let role_catpic = message.guild.roles.cache.find(r=>r.name==="cat pic??")
+    let role_east = message.guild.roles.cache.find(r=>r.name==="east")
     //channels
     let goatchannel = message.guild.channels.cache.find(c=>c.name==="heybotgivemeagoatpic")
 
@@ -25,7 +26,7 @@ east.on('messageCreate', (message) => {
     if (message.author.bot) { return; }
 
     // say "hi @east"
-    else if (message.content.toLowerCase()===`hi ${east.user.toString()}` || message.content.toLowerCase()==='hi @east') {
+    else if (message.content.toLowerCase()===`hi ${east.user.toString()}` || message.content.toLowerCase()===`hi ${role_east.toString()}`) {
         message.reply('Hello!').catch(console.error)
         console.log('Hello!')
     }
