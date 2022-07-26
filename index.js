@@ -33,25 +33,18 @@ east.on('messageCreate', (message) => {
         case `hey ${east.user.toString()}`:
         case `hey ${role_east.toString()}`:
         case `hey east`:
+        case `yo ${east.user.toString()}`:
+        case `yo ${role_east.toString()}`:
+        case `yo east`:
 
             message.reply('Hello!').catch(console.error)
             console.log('Hello!')
-            return; break;
+            return;
     }
-    /*else if (message.content.toLowerCase()===`hi ${east.user.toString()}` ||
-    message.content.toLowerCase()===`hi ${role_east.toString()}`||
-    message.content.toLowerCase()===`hi east`||
-    message.content.toLowerCase()===`hey east`||
-    message.content.toLowerCase()===`hey ${east.user.toString()}`||
-    message.content.toLowerCase()===`hey ${role_east.toString()}`
-    ) {
-        message.reply('Hello!').catch(console.error)
-        console.log('Hello!')
-    }*/
     if (message.content.toLowerCase() === (`test`)) {
         console.log('test')
     }
-    // bowling ball
+    /*// bowling ball
     else if (message.content === '😮') {
         if (message.member.roles.cache.has(role_bball.id)) {
             message.reply(`${message.author.toString()} 😔`).catch(console.error)
@@ -62,8 +55,8 @@ east.on('messageCreate', (message) => {
             console.log(`${message.author.tag} given bowling ball`)
             message.member.roles.add(role_bball).catch(console.error)
         }
-        // ultimate dog toy
     }
+    // ultimate dog toy
     else if (message.content === '🦴') {
         if (message.member.roles.cache.has(role_udt.id)) {
             message.reply(`${message.author.toString()} 😔`).catch(console.error)
@@ -74,7 +67,7 @@ east.on('messageCreate', (message) => {
             console.log(`${message.author.tag} given ultimate dog toy`)
             message.member.roles.add(role_udt).catch(console.error)
         }
-    }
+    }*/
     // hey bot give me a goat pic
     else if (message.channelId === goatchannel.id) {
         if (message.content.toLowerCase() === "hey bot give me a goat pic") {
@@ -82,7 +75,7 @@ east.on('messageCreate', (message) => {
 
             message.reply({ files: ['./img/goats/' + a + '.jpg'] }).catch(console.error)
             if (a == 0) {
-                message.member.roles.add(role_catpic).catch(console.error)
+                //message.member.roles.add(role_catpic).catch(console.error)
                 console.log("cat pic given")
             } else { console.log("goat pic given") }
         }
