@@ -17,6 +17,7 @@ east.on('ready', () => {
 east.on('messageCreate', (message) => {
     if (east.user.presence.activities !== game) {
         east.user.setPresence({ activities: [{ name: game }] })
+        console.log(`activity reset`)
     }
     // to avoid duplication
     if (message.author.bot) { return }
