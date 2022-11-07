@@ -4,7 +4,7 @@ require('dotenv').config();
 //VARIABLES
 const { MessageAttachment, Client, Intents } = require('discord.js');
 const east = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const ver = "1.10";
+const ver = "1.11";
 const game = 'being gay and doing crimes';
 //
 
@@ -15,7 +15,7 @@ east.on('ready', () => {
 })
 
 east.on('messageCreate', (message) => {
-    if (east.user.presence.activities !== game) {
+    if (east.user.presence.activities.toString() !== game) {
         east.user.setPresence({ activities: [{ name: game }] })
         console.log(`activity reset`)
     }
