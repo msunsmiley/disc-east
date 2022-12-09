@@ -4,7 +4,7 @@ require('dotenv').config();
 //VARIABLES
 const { MessageAttachment, Client, Intents } = require('discord.js');
 const east = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const ver = "1.11";
+const ver = "1.12";
 const game = 'being gay and doing crimes';
 //
 
@@ -57,7 +57,7 @@ east.on('messageCreate', (message) => {
     // hey bot give me a goat pic
     else if (message.channelId === goatchannel.id) {
         if (message.content.toLowerCase() === "hey bot give me a goat pic") {
-            let a = Math.floor(Math.random() * 40);
+            let a = Math.floor(Math.random() * 41);
 
             message.reply({ files: ['./img/goats/' + a + '.jpg'] }).catch(console.error)
             if (a == 0) {
