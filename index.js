@@ -55,13 +55,16 @@ east.on('messageCreate', (message) => {
     else if (message.channelId === goatchannel.id) {
         //if (message.content.toLowerCase() === "hey bot give me a goat pic") {
         if (message.content.toLowerCase().includes("hey bot give me a goat pic")) {
-            let a = Math.floor(Math.random() * 41);
+            let a = Math.floor(Math.random() * 43);
 
             message.reply({ files: ['./img/goats/' + a + '.jpg'] }).catch(console.error)
             if (a == 0) {
                 //message.member.roles.add(role_catpic).catch(console.error)
                 console.log("cat pic given")
             } else { console.log("goat pic given") }
+        }
+        else if (message.content.toLowerCase().includes("hey bot give me a girlfriend")){
+            message.reply({files: ['./img/goats/42.jpg']})
         }
         /*else {
             message.delete().catch(console.error)
