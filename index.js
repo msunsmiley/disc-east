@@ -53,7 +53,8 @@ east.on('messageCreate', (message) => {
     }
 
     else if (message.channelId === goatchannel.id) {
-        if (message.content.toLowerCase() === "hey bot give me a goat pic") {
+        //if (message.content.toLowerCase() === "hey bot give me a goat pic") {
+        if (message.content.toLowerCase().includes("hey bot give me a goat pic")) {
             let a = Math.floor(Math.random() * 41);
 
             message.reply({ files: ['./img/goats/' + a + '.jpg'] }).catch(console.error)
