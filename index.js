@@ -65,10 +65,10 @@ east.on('messageCreate', (message) => {
             } else { console.log("goat pic given") }
         }
         else if (message.content.toLowerCase().includes("hey bot give me a girlfriend")){
-            message.reply({files: ['./img/goats/42.jpg']})
+            message.reply({files: ['./img/goats/42.jpg']}).catch(console.error)
         }
         else if (message.content.toLowerCase().includes("hey bot give me a boyfriend")){
-            message.reply({files: ['./img/goats/43.jpg']})
+            message.reply({files: ['./img/goats/43.jpg']}).catch(console.error)
         }
         /*else {
             message.delete().catch(console.error)
