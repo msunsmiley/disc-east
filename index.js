@@ -56,7 +56,7 @@ east.on('messageCreate', (message) => {
     else if (message.channelId === goatchannel.id) {
         //if (message.content.toLowerCase() === "hey bot give me a goat pic") {
         if (message.content.toLowerCase().includes("hey bot give me a goat pic")) {
-            let a = Math.floor(Math.random() * 43);
+            let a = Math.floor(Math.random() * 44);
 
             message.reply({ files: ['./img/goats/' + a + '.jpg'] }).catch(console.error)
             if (a == 0) {
@@ -66,6 +66,9 @@ east.on('messageCreate', (message) => {
         }
         else if (message.content.toLowerCase().includes("hey bot give me a girlfriend")){
             message.reply({files: ['./img/goats/42.jpg']})
+        }
+        else if (message.content.toLowerCase().includes("hey bot give me a boyfriend")){
+            message.reply({files: ['./img/goats/43.jpg']})
         }
         /*else {
             message.delete().catch(console.error)
